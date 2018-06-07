@@ -23,9 +23,11 @@ class App extends Component {
     return (
       <div className="App">
         <NavHeader />
-        <TeamList teams={this.state.teams} selectPlayer={this.handleSelectPlayer}/>
-        {!this.state.selectedPlayer ? <div> Click Player for Details </div> :
-          <PlayerDetails selectedPlayer={this.state.selectedPlayer}/>}
+        <div className="info-container">
+          <TeamList teams={this.state.teams} selectPlayer={this.handleSelectPlayer}/>
+          {!this.state.selectedPlayer ? <div> Click Player for Details </div> :
+            <PlayerDetails selectedPlayer={this.state.selectedPlayer}/>}
+        </div>
       </div>
     );
   }

@@ -62,3 +62,7 @@
 .detail-text {
   color: #DAF7A6 !important;
 }
+
+.info-container{
+  grid-template-columns: 1fr 1fr !important;
+}
