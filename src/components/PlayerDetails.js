@@ -4,7 +4,7 @@ import { Card, Image } from 'semantic-ui-react'
 const PlayerDetails = ({ selectedPlayer }) => {
   return (
     <Card
-      className='player-details'>
+    className='player-details'>
       <Image src='http://www.burkenc.org/assets/PublishingImages/Parks%20and%20Rec/Basketball.png'/>
       <Card.Header>
         {selectedPlayer.name}
