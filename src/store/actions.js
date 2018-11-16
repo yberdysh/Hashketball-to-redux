@@ -2,7 +2,7 @@
 export const SELECT_PLAYER = "SELECT_PLAYER"
 
 // action creators
-// action creators return actions
+// action creators dispatch actions
 export const selectPlayer = (player) => ({
   type: SELECT_PLAYER,
   player

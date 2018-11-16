@@ -1,9 +1,9 @@
 import React from 'react'
 import {selectPlayer} from '../store'
 
-const Player = ({ player, selectPlayer }) => {
+const Player = ({ player, selectAPlayer }) => {
   return (
-    <div onClick={() => selectPlayer(player)}>
+    <div onClick={() => selectAPlayer(player)}>
       <p>{player.name}</p>
     </div>
   )
@@ -12,6 +12,7 @@ const Player = ({ player, selectPlayer }) => {
 const mapDispatchToProps = (dispatch) => ({
   selectAPlayer: selectPlayer
   // set to a function selectPlayer that can be invoked
+  // selectAPlayer: () => dispatch(selectPlayer())
 })
 
 export default connect(null, mapDispatchToProps)(Player)
