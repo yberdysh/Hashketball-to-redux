@@ -4,7 +4,7 @@ import gamesData from '../gamesData';
 import {SELECT_PLAYER} from './actions'
 
 const initialState = {
-  selectedPlayer: {},
+  selectedPlayer: null,
   teams: gamesData.teams
 }
 

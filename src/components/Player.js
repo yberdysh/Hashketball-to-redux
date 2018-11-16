@@ -1,5 +1,6 @@
 import React from 'react'
-import {selectPlayer} from '../store'
+import {selectPlayer} from '../store/actions'
+import {connect} from 'react-redux'
 
 const Player = ({ player, selectAPlayer }) => {
   return (
@@ -10,9 +11,9 @@ const Player = ({ player, selectAPlayer }) => {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  selectAPlayer: selectPlayer
+  // selectAPlayer: selectPlayer
   // set to a function selectPlayer that can be invoked
-  // selectAPlayer: () => dispatch(selectPlayer())
+  selectAPlayer: (player) => dispatch(selectPlayer(player))
 })
 
 export default connect(null, mapDispatchToProps)(Player)

@@ -5,7 +5,7 @@ import Team from './Team'
 const TeamList = ({ teams, selectPlayer }) => {
 
   const renderedTeams = teams.map(team => {
-    return <Team key={team.id} team={team} selectPlayer={selectPlayer} />
+    return <Team key={team.id} team={team} />
   })
 
   return (
