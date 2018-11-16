@@ -1,3 +1,27 @@
+Flow of setting up redux: 
+- npm install redux and react-redux
+    + redux: a library that is a state manager with a single source of truth, provides {createStore}
+    + react-redux: a library to help connect react to redux: provides {Provider, connect}
+        * connect takes (mapStateToProps, mapDispatchToProps)(Component)
+    + functions YOU define: reducer, mapStateToProps, mapDispatchToProps
+- create a store folder to keep reduxy things
+- create an index.js file in the store folder
+    + in the index.js file, create a store using createStore and export it 
+    + createStore is a function that takes in a reducer
+- create a reducer file
+        * houses initial state
+        * exports a reducer function that uses initial state
+        * action types as consts (not needed but recommended)- can also do this in a separate file (actions.js)
+        * action creators (not needed for this application- has to do with fetching) (can also do in actions.js)
+        * thunks (not needed for this application- has to do with fetching)
+    + define reducer function that takes an initial state, export reducer
+- In highest level of your app (ReactDOM.render), wrap app in Provider and give it store as props 
+    + make sure to import the store!
+- if converting react app (highly encouraged to just start redux from beginning), slowly disconnect the state and passed down props
+- when connecting a component to the store, mapStateToProps to give parts of state on props and mapStateToDispatch to give certain functions on props
+
+-----------------------------------------------------------------------------
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>

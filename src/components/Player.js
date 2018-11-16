@@ -1,4 +1,5 @@
 import React from 'react'
+import {selectPlayer} from '../store'
 
 const Player = ({ player, selectPlayer }) => {
   return (
@@ -8,4 +9,9 @@ const Player = ({ player, selectPlayer }) => {
   )
 }
 
-export default Player
+const mapDispatchToProps = (dispatch) => ({
+  selectAPlayer: selectPlayer
+  // set to a function selectPlayer that can be invoked
+})
+
+export default connect(null, mapDispatchToProps)(Player)
