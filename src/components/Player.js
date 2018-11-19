@@ -1,11 +1,17 @@
 import React from 'react'
+import {connect} from 'react-redux';
+import {selectPlayer} from '../store/actions'
 
-const Player = ({ player, selectPlayer }) => {
+const Player = ({ player, selectAPlayer }) => {
   return (
-    <div onClick={() => selectPlayer(player)}>
+    <div onClick={() => selectAPlayer(player)}>
       <p>{player.name}</p>
     </div>
   )
 }
 
-export default Player
+const mapDispatchToProps = (dispatch) => ({
+  selectAPlayer: (player) => dispatch(selectPlayer(player))
+})
+
+export default connect(null, mapDispatchToProps)(Player)
